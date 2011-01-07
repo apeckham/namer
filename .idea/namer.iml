@@ -61,7 +61,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v0.8.7, /Users/apeckham/.rvm/gems/ree-1.8.6-20090610@global/gems/rake-0.8.7)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v0.8.7, /Users/apeckham/.rvm/gems/ruby-1.8.7-p302@global/gems/rake-0.8.7)" level="application" />
   </component>
 </module>
 
