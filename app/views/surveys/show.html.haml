@@ -5,11 +5,11 @@
 %h2
   = h(@survey.description)
 
-%h2 Suggestions
-
-%ul
-  - @survey.suggestions.each do |suggestion|
-    %li= h(suggestion.name)
+- unless @survey.suggestions.empty?
+  %h2 Suggestions
+  %ul
+    - @survey.suggestions.each do |suggestion|
+      %li= h(suggestion.name)
 
 %h2 What would you call it?
 - form_for Suggestion.new, :url =>{ :action => :suggest, :id => @survey.to_param } do |f|
