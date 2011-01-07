@@ -2,9 +2,13 @@ require 'spec_helper'
 
 describe SurveysController do
 
-  #Delete this example and add some real ones
-  it "should use SurveysController" do
-    controller.should be_an_instance_of(SurveysController)
-  end
+  describe "create" do
+    it "should create a survey when form is submitted" do
+      expect do
+        post :create, :survey => { :what => "a web site", :description => "this web site!"}
+        response.should redirect_to :controller => :surveys, :action => :show
+      end.to change(Survey, :count).by(1)
 
+    end
+  end
 end
