@@ -9,5 +9,6 @@ class SurveysController < ApplicationController
 
   def show
     @survey = Survey.find_by_random_id(params[:id])
+    redirect_to(:action => :index) unless @survey
   end
 end

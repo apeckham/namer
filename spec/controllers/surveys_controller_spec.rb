@@ -21,6 +21,9 @@ describe SurveysController do
       assigns(:survey).should be_nil     
     end
 
-    it "should show error if survey is missing"
+    it "should show error if survey is missing" do
+      get :show, :id => "aaaaaaaaaaaaaaaaaa"
+      response.should redirect_to :controller => :surveys, :action => :index
+    end
   end
 end
