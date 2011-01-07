@@ -30,9 +30,28 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="rspec" version="1.2.0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="false" />
+      </requirement>
+      <source from="config/environment.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="rspec-rails" version="1.2.0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="false" />
+      </requirement>
+      <source from="config/environment.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="sqlite3-ruby" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="config/database.yml" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="test-unit" version="1.2.3" bound="EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="lib/tasks/rspec.rake" />
+      <source from="script/spec" />
     </requirement>
   </component>
   <component name="NewModuleRootManager">
