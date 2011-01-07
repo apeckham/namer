@@ -1,5 +1,6 @@
 class Survey < ActiveRecord::Base
   before_create :generate_random_id
+  has_many :suggestions
 
   def to_param
     self.random_id
