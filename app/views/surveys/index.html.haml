@@ -1,5 +1,5 @@
 
-- form_for :survey do |f|
+- form_for :survey, :url => {:action => :create} do |f|
   %h1 What do you want to name?
   = f.text_field :what
 

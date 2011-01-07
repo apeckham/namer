@@ -3,7 +3,10 @@ class SurveysController < ApplicationController
   end
 
   def create
-    Survey.create!(params[:survey])
-    redirect_to :action => :show
+    survey = Survey.create!(params[:survey])
+    redirect_to :action => :show, :id => survey.to_param
+  end
+
+  def show
   end
 end
