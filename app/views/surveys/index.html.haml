@@ -1,1 +1,10 @@
-%h1 What do you want to name?   
+
+- form_for :survey do |f|
+  %h1 What do you want to name?
+  = f.text_field :what
+
+  %h1 Describe it:
+  = f.text_area :description, :size => "50x5"
+
+  %br
+  = f.submit "Find me a name!"
