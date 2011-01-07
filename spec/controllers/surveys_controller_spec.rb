@@ -20,5 +20,7 @@ describe SurveysController do
       get :show, :id => survey.id
       assigns(:survey).should be_nil     
     end
+
+    it "should show error if survey is missing"
   end
 end
