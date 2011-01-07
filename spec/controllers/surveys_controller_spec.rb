@@ -9,5 +9,16 @@ describe SurveysController do
       end.to change(Survey, :count).by(1)
     end
 
+    it "should look up surveys by random id" do
+      survey = Survey.create!
+      get :show, :id => survey.to_param
+      assigns(:survey).should == survey
+    end
+
+    it "should not allow lookups by id" do
+      survey = Survey.create!
+      get :show, :id => survey.id
+      assigns(:survey).should be_nil     
+    end
   end
 end

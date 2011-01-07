@@ -8,5 +8,6 @@ class SurveysController < ApplicationController
   end
 
   def show
+    @survey = Survey.find_by_random_id(params[:id])
   end
 end
