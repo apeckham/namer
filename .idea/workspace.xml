@@ -34,16 +34,16 @@
       <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/surveys/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="25" selection-start="46" selection-end="46" vertical-scroll-proportion="-0.6296296">
+            <state line="2" column="0" selection-start="0" selection-end="47" vertical-scroll-proportion="-1.2592592">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="surveys_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="surveys_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/surveys_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="85" selection-start="210" selection-end="210" vertical-scroll-proportion="0.1440678">
+            <state line="5" column="44" selection-start="124" selection-end="124" vertical-scroll-proportion="-3.148148">
               <folding />
             </state>
           </provider>
@@ -52,19 +52,17 @@
       <file leaf-file-name="index.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/surveys/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="28" selection-start="257" selection-end="258" vertical-scroll-proportion="-6.9259257">
+            <state line="12" column="35" selection-start="68" selection-end="286" vertical-scroll-proportion="-7.5555553">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="1" selection-start="972" selection-end="972" vertical-scroll-proportion="-23.185184">
-              <folding>
-                <marker date="1294366034000" expanded="true" signature="5:140" placeholder="{...}" />
-              </folding>
+            <state line="22" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.5282486">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,7 +70,7 @@
       <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="11" selection-start="189" selection-end="189" vertical-scroll-proportion="-6.9259257">
+            <state line="7" column="0" selection-start="78" selection-end="78" vertical-scroll-proportion="-4.4074073">
               <folding />
             </state>
           </provider>
@@ -127,9 +125,9 @@
         <option value="$PROJECT_DIR$/spec/controllers/surveys_controller_spec.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/views/surveys/index.html.haml" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/app/views/surveys/show.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/surveys_controller.rb" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
       </list>
     </option>
   </component>
@@ -674,12 +672,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="784" y="22" width="1607" height="1341" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32828686" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37325677" sideWeight="0.99115604" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37325677" sideWeight="0.99115604" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297785" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18256475" sideWeight="0.62674326" order="0" side_tool="false" content_ui="tabs" />
@@ -708,7 +706,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="link to home" />
+    <option name="LAST_COMMIT_MESSAGE" value="style all pages" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -738,6 +736,7 @@
     <MESSAGE value="add suggestions model" />
     <MESSAGE value="user can add suggestion" />
     <MESSAGE value="link to home" />
+    <MESSAGE value="style all pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -820,39 +819,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="189" selection-end="189" vertical-scroll-proportion="-6.9259257">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/surveys/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="257" selection-end="258" vertical-scroll-proportion="-6.9259257">
+        <state line="12" column="35" selection-start="68" selection-end="286" vertical-scroll-proportion="-7.5555553">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="1" selection-start="972" selection-end="972" vertical-scroll-proportion="-23.185184">
-          <folding>
-            <marker date="1294366034000" expanded="true" signature="5:140" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/surveys/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="25" selection-start="46" selection-end="46" vertical-scroll-proportion="-0.6296296">
+        <state line="2" column="0" selection-start="0" selection-end="47" vertical-scroll-proportion="-1.2592592">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/surveys_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="85" selection-start="210" selection-end="210" vertical-scroll-proportion="0.1440678">
+        <state line="5" column="44" selection-start="124" selection-end="124" vertical-scroll-proportion="-3.148148">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="78" selection-end="78" vertical-scroll-proportion="-4.4074073">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.5282486">
           <folding />
         </state>
       </provider>

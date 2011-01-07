@@ -8,9 +8,14 @@ body {
 
 #outer {
   width: 700px;
-  padding: 20px;
   margin: auto;
-  background-color: white;
+  padding: 20px;
+}
+
+#main {
+  background-color: white;  
+  padding: 10px 20px;
+  margin-top: 30px;
 }
 
 #header {
@@ -65,4 +70,8 @@ ul li {
   color: black;
   padding: 6px;
   margin: 20px 0;
+}
+
+.share, .create_new {
+  margin-top: 30px;
 }
