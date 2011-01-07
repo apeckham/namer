@@ -4,7 +4,7 @@ class SurveysController < ApplicationController
 
   def create
     survey = Survey.create!(params[:survey])
-    flash[:message] = "This is your only chance -- bookmark this page!"
+    flash[:message] = "Send this page to your friends. This is your only chance -- bookmark it now!"
     redirect_to :action => :show, :id => survey.to_param
   end
 
