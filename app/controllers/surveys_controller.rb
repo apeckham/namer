@@ -4,6 +4,7 @@ class SurveysController < ApplicationController
 
   def create
     survey = Survey.create!(params[:survey])
+    flash[:message] = "This is your only chance -- Share this page with your friends!"
     redirect_to :action => :show, :id => survey.to_param
   end
 
@@ -15,6 +16,6 @@ class SurveysController < ApplicationController
   def suggest
     @survey = Survey.find_by_random_id(params[:id])
     @survey.suggestions.create!(params[:suggestion])
-    redirect_to(:action => :show, :id => @survey.to_param)    
+    redirect_to(:action => :show, :id => @survey.to_param)
   end
 end

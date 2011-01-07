@@ -1,10 +1,12 @@
-
 - form_for :survey, :url => {:action => :create} do |f|
-  %h1 What do you want to name?
+  %h1 I need a name for&hellip;
   = f.text_field :what
 
-  %h1 Describe it:
-  = f.text_area :description, :size => "50x5"
+  .examples
+    (my baby, my car, a web site)
+
+  %h1 It is a&hellip;
+  = f.text_area :description, :rows => 2
 
   %br
-  = f.submit "Find me a name!"
+  = f.submit "Let's find a name!"

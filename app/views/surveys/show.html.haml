@@ -1,17 +1,36 @@
+- if flash[:message]
+  #flash= flash[:message]
+
 %h1
   I need a name for
   %b= h(@survey.what)
 
-%h2
-  = h(@survey.description)
+%h1
+  It is a
+  %b= h(@survey.description)
 
 - unless @survey.suggestions.empty?
-  %h2 Suggestions
+  %h1 Here's what others suggested:
   %ul
     - @survey.suggestions.each do |suggestion|
       %li= h(suggestion.name)
 
-%h2 What would you call it?
+%h1 What would you call it?
 - form_for Suggestion.new, :url =>{ :action => :suggest, :id => @survey.to_param } do |f|
   = f.text_field :name
   = f.submit "Suggest"
+
+.share
+  Share this with your friends to see what they suggest!
+
+  :erb
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    </div>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d2674df184b11a5"></script>
+    <!-- AddThis Button END -->
