@@ -1,3 +1,7 @@
+- content_for :title do
+  I need a name for
+  = h(@survey.what)
+
 - if flash[:message]
   #flash= flash[:message]
 
@@ -23,7 +27,7 @@
   %h1 What would you call it?
   - form_for Suggestion.new, :url =>{ :action => :suggest, :id => @survey.to_param } do |f|
     = f.text_field :name
-    = f.submit "Suggest"
+    = f.submit "Suggest", :disabled => true
 
 .share
   Share this with your friends to see what they suggest!
@@ -43,5 +47,9 @@
 .create_new
   = link_to "Need a name of your own?", "/"
 
+
 :javascript
-  $(function() { namer.lookUpDomains(); });
+  $(function() {
+    liveValidateForm($('form'));
+    namer.lookUpDomains();    
+  });
