@@ -16,8 +16,9 @@
       - @survey.suggestions.each do |suggestion|
         %li
           =h(suggestion.name)
-          = "(#{suggestion.score})"
-          = link_to "+1", vote_path(suggestion), :method => :put
+          %div
+            %span=suggestion.score
+            = link_to "+1", vote_path(suggestion), :method => :put
 
   %h1 What would you call it?
   - form_for Suggestion.new, :url =>{ :action => :suggest, :id => @survey.to_param } do |f|
