@@ -4,9 +4,11 @@
   %head
     = stylesheet_link_tag("style.css")
     = javascript_include_tag("http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js")
+    = javascript_include_tag("namer")
 
-#outer
-  #header
-    = link_to(image_tag("logo.png"), :controller => :surveys, :action => :index)
-
-  = yield
+  %body
+    #outer
+      #header
+        = link_to(image_tag("logo.png"), :controller => :surveys, :action => :index)
+    
+      = yield

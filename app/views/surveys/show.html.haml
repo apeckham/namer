@@ -14,8 +14,8 @@
     %h1 Here's what others suggested:
     %ul#suggestions
       - @survey.suggestions.each do |suggestion|
-        %li
-          =h(suggestion.name)
+        %li.clearfix
+          %span.name=h(suggestion.name)
           %div
             %span=suggestion.score
             = link_to "+1", vote_path(suggestion), :method => :put
@@ -37,8 +37,11 @@
     <a class="addthis_button_preferred_4"></a>
     <a class="addthis_button_compact"></a>
     </div>
-    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d2674df184b11a5"></script>
+    <script data-third-party="true" type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d2674df184b11a5"></script>
     <!-- AddThis Button END -->
 
 .create_new
   = link_to "Need a name of your own?", "/"
+
+:javascript
+  $(function() { namer.lookUpDomains(); });

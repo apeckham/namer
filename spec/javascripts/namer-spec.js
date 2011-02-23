@@ -1,7 +1,13 @@
 describe("namer", function() {
   describe("lookUpDomains", function() {
     beforeEach(function() {
-      spec.loadFixture('test');
+
+      spyOn($, 'ajax');
+      spec.loadFixture('show');
+    });
+
+    it("should make a request for each suggestion", function() {
+//      expect($.ajax.callCount).toEqual(3);
     });
   });
 });

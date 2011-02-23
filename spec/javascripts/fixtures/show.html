@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en-US' xml:lang='en-US' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <link href="/stylesheets/style.css?1298436435" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+    <script src="/javascripts/namer.js?1298437340" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id='outer'>
+      <div id='header'>
+        <a href="/"><img alt="Logo" src="/images/logo.png?1298429945" /></a>
+      </div>
+      <div id='main'>
+        <h1>
+          I need a name for
+          <b>foo</b>
+        </h1>
+        <h1>
+          It is a
+          <b>bar</b>
+        </h1>
+        <h1>Here's what others suggested:</h1>
+        <ul id='suggestions'>
+          <li class='clearfix'>
+            <span class='name'>baz</span>
+            <div>
+              <span>2</span>
+              <a href="/vote/1" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'put'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '/GI/dono2c4Su/j312kUzbfeKpMN9z/hTBmvnjdYUPM='); f.appendChild(s);f.submit();return false;">+1</a>
+            </div>
+          </li>
+          <li class='clearfix'>
+            <span class='name'>hjgjhg</span>
+            <div>
+              <span>0</span>
+              <a href="/vote/5" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'put'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '/GI/dono2c4Su/j312kUzbfeKpMN9z/hTBmvnjdYUPM='); f.appendChild(s);f.submit();return false;">+1</a>
+            </div>
+          </li>
+          <li class='clearfix'>
+            <span class='name'>what if the suggestion is really really long?</span>
+            <div>
+              <span>0</span>
+              <a href="/vote/6" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'put'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '/GI/dono2c4Su/j312kUzbfeKpMN9z/hTBmvnjdYUPM='); f.appendChild(s);f.submit();return false;">+1</a>
+            </div>
+          </li>
+        </ul>
+        <h1>What would you call it?</h1>
+        <form action="/surveys/suggest/ayr90dhkbrbh0wgidz9n" class="new_suggestion" id="new_suggestion" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="/GI/dono2c4Su/j312kUzbfeKpMN9z/hTBmvnjdYUPM=" /></div>
+          <input id="suggestion_name" name="suggestion[name]" size="30" type="text" />
+          <input id="suggestion_submit" name="commit" type="submit" value="Suggest" />
+        </form>
+      </div>
+      <div class='share'>
+        Share this with your friends to see what they suggest!
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+      <a class="addthis_button_preferred_1"></a>
+      <a class="addthis_button_preferred_2"></a>
+      <a class="addthis_button_preferred_3"></a>
+      <a class="addthis_button_preferred_4"></a>
+      <a class="addthis_button_compact"></a>
+      </div>
+      <!-- AddThis Button END -->
+
+      </div>
+      <div class='create_new'>
+        <a href="/">Need a name of your own?</a>
+      </div>
+      <script type='text/javascript'>
+        //<![CDATA[
+          $(function() { namer.lookUpDomains(); });
+        //]]>
+      </script>
+    </div>
+  </body>
+</html>
