@@ -1,8 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.connect '/', :controller => :surveys, :action => :index
-  map.connect '/:id', :controller => :surveys, :action => :show
+  map.surveys '/', :controller => :surveys, :action => :index
+  map.survey '/:id', :controller => :surveys, :action => :show
   
-  #map.resources :surveys
+  map.resources :suggestions
+  map.vote '/vote/:id', :controller => :suggestions, :action => :vote
 
   # The priority is based upon order of creation: first created -> highest priority.
 

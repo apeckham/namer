@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110107011527) do
+ActiveRecord::Schema.define(:version => 20110223033026) do
 
   create_table "suggestions", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "survey_id"
+    t.integer  "score",      :default => 0, :null => false
   end
 
   create_table "surveys", :force => true do |t|
