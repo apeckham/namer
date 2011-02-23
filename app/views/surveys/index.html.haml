@@ -1,20 +1,28 @@
 #main
-  - form_for :survey, :url => {:action => :create} do |f|
-    %h1 I need a name for&hellip;
-    = f.text_field :what
+  #form
+    - form_for :survey, :url => {:action => :create} do |f|
+      %h1 I need a name for&hellip;
+      = f.text_field :what
 
-    .examples
-      (my baby, my car, a web site)
+      .examples
+        (my baby, my car, a web site)
 
-    %h1 It is a&hellip;
-    = f.text_area :description, :rows => 2
+      %h1 It is a&hellip;
+      = f.text_area :description, :rows => 2
 
-    %br
-    = f.check_box :private
-    = f.label :private, 'Make this private'
+      %br
+      = f.check_box :private
+      = f.label :private, 'Make this private'
 
-    %br
-    = f.submit "Let's find a name!"
+      %br
+      = f.submit "Let's find a name!"
+      
+  %ul#surveys
+    %li Name these!
+    - @surveys.each do |survey|
+      %li= link_to(h(survey.what), survey)
+    
+  .clear
 
 :javascript
   $(function() {

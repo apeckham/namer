@@ -9,6 +9,20 @@ describe SurveysController do
     
     Survey.last.should be_private
   end
+  
+  it "shows a list of surveys" do
+    11.times { Survey.create! }
+    
+    get :index
+    assigns(:surveys).should have(10).items
+  end
+
+  it "does not show private surveys" do
+    Survey.create!(:private => true)
+    
+    get :index
+    assigns(:surveys).should be_empty
+  end
 
   it "should look up surveys by random id" do
     survey = Survey.create!

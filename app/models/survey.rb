@@ -9,4 +9,8 @@ class Survey < ActiveRecord::Base
   def generate_random_id
     self.random_id = rand(36**20).to_s(36)
   end
+  
+  def public?
+    not private?
+  end
 end

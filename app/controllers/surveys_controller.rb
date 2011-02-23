@@ -1,5 +1,6 @@
 class SurveysController < ApplicationController
   def index
+    @surveys = Survey.all(:order => "random()").select { |survey| survey.public? }.first(10)
   end
 
   def create

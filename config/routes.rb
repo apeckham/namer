@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.connect '/', :controller => :surveys, :action => :index
-  map.connect '/:id', :controller => :surveys, :action => :show
+  map.survey '/:id', :controller => :surveys, :action => :show
   
   #map.resources :surveys
 

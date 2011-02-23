@@ -12,7 +12,7 @@
 
   - unless @survey.suggestions.empty?
     %h1 Here's what others suggested:
-    %ul
+    %ul#suggestions
       - @survey.suggestions.each do |suggestion|
         %li= h(suggestion.name)
 
