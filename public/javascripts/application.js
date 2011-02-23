@@ -1,4 +1,4 @@
-function liveValidateForm () {
+function liveValidateForm ($form) {
   function formCompleted () {
     return $('#survey_what').val().length > 0 && $('#survey_description').val().length > 0;
   }
@@ -7,7 +7,7 @@ function liveValidateForm () {
     $("#survey_submit").attr("disabled", !formCompleted());
   });
 
-  $("form").submit(function () {
+  $form.submit(function () {
     return formCompleted();
   });
 }

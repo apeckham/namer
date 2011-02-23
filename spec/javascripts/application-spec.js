@@ -1,7 +1,7 @@
 describe("liveValidateForm", function() {
   it("disables the submit button until all fields are non empty", function() {
     spec.loadFixture('form');
-    liveValidateForm();
+    liveValidateForm($('form'));
     expect($('form input[type=submit]').attr('disabled')).toBeFalsy();
     $('form input').keyup();
     expect($('form input[type=submit]').attr('disabled')).toBeTruthy();
@@ -16,7 +16,7 @@ describe("liveValidateForm", function() {
   
   it("prevents the form from being submitted until all fields are non empty", function() {
     spec.loadFixture('form');
-    liveValidateForm();
+    liveValidateForm($('form'));
     
     window.gotCalled = false;
     $('form').attr('action', 'javascript:window.gotCalled = true');
