@@ -10,6 +10,10 @@
     = f.text_area :description, :rows => 2
 
     %br
+    = f.check_box :private
+    = f.label :private, 'Make this private'
+
+    %br
     = f.submit "Let's find a name!"
 
 :javascript

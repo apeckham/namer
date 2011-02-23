@@ -3,9 +3,11 @@ require 'spec_helper'
 describe SurveysController do
   it "should create a survey when form is submitted" do
     expect do
-      post :create, :survey => {:what => "a web site", :description => "this web site!"}
+      post :create, :survey => {:what => "a web site", :description => "this web site!", :private => "1"}
       response.should redirect_to :controller => :surveys, :action => :show, :id => Survey.last.to_param
     end.to change(Survey, :count).by(1)
+    
+    Survey.last.should be_private
   end
 
   it "should look up surveys by random id" do
