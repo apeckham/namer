@@ -29,6 +29,6 @@
     $("#survey_what").focus();
   });
   
-  $("input, textarea").keypress(function() {
+  $("input, textarea").keyup(function() {
     $("#survey_submit").attr("disabled", $('#survey_what').val().length === 0 || $('#survey_description').val().length === 0);
   });
