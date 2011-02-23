@@ -1,2 +1,14 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+function liveValidateForm () {
+  function formCompleted () {
+    return $('#survey_what').val().length > 0 && $('#survey_description').val().length > 0;
+  }
+
+  $("input, textarea").keyup(function() {
+    $("#survey_submit").attr("disabled", !formCompleted());
+  });
+
+  $("form").submit(function () {
+    return formCompleted();
+  });
+  
+}
