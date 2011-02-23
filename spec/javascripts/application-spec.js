@@ -15,6 +15,19 @@ describe("liveValidateForm", function() {
   });
   
   it("prevents the form from being submitted until all fields are non empty", function() {
+    spec.loadFixture('form');
+    liveValidateForm();
     
+    window.gotCalled = false;
+    $('form').attr('action', 'javascript:window.gotCalled = true');
+    
+    $('form').submit();
+    expect(gotCalled).toBeFalsy();
+    
+    $("#survey_what").val("WHAT!!");
+    $("#survey_description").val("description");
+    
+    $('form').submit();
+    expect(gotCalled).toBeTruthy();
   });
 });
