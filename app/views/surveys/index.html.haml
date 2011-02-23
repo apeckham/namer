@@ -15,7 +15,7 @@
       = f.label :private, 'Make this private'
 
       %br
-      = f.submit "Let's find a name!"
+      = f.submit "Let's find a name!", :disabled => true
       
   %ul#surveys
     %li Name these!
@@ -27,4 +27,8 @@
 :javascript
   $(function() {
     $("#survey_what").focus();
+  });
+  
+  $("input, textarea").keypress(function() {
+    $("#survey_submit").attr("disabled", $('#survey_what').val().length === 0 || $('#survey_description').val().length === 0);
   });
