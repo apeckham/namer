@@ -1,6 +1,5 @@
 function liveValidateForm ($form) {
   function formCompleted () {
-    // return $('#survey_what').val().length > 0 && $('#survey_description').val().length > 0;
     var allCompleted = true;
     $form.find('input[type=text], textarea').each(function () {
       if ($(this).val().length == 0) {
