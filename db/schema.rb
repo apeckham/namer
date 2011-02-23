@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20110223033026) do
     t.text     "what"
     t.text     "description"
     t.string   "random_id"
+    t.boolean  "private"
   end
 
 end

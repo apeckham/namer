@@ -12,7 +12,7 @@
 
   - unless @survey.suggestions.empty?
     %h1 Here's what others suggested:
-    %ul
+    %ul#suggestions
       - @survey.suggestions.each do |suggestion|
         %li
           =h(suggestion.name)
@@ -41,8 +41,3 @@
 
 .create_new
   = link_to "Need a name of your own?", "/"
-
-:javascript
-  $(function() {
-    $("#suggestion_name").focus();
-  });
