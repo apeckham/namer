@@ -90,12 +90,31 @@ ul#suggestions li {
   padding: 3px 6px;
   margin: 0 6px 10px 0;
   line-height: 1.5em;
-  position:relative;
 }
 
-ul#suggestions li a {
-  position:absolute;
-  right:10px;
+ul#suggestions li div {
+  float:right;
+  font-size:0.4em;
+}
+
+ul#suggestions li span {
+  font-size:1.5em;
+  margin-right:0.5em;
+}
+
+ul#suggestions li div a {
+  display:inline-block;
+  background-color:#fff;
+  border:1px solid #ccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  text-decoration:none;
+  width:2em;
+  height:2em;
+  padding:0;
+  line-height:2;
+  text-align:center;
+  color:#000;
 }
 
 #flash {
