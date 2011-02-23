@@ -10,5 +10,4 @@ function liveValidateForm () {
   $("form").submit(function () {
     return formCompleted();
   });
-  
 }
