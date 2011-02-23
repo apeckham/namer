@@ -24,6 +24,7 @@ body {
 }
 
 #surveys {
+  width: 150px;
   float: right;
   list-style: none;
 }
@@ -92,7 +93,7 @@ ul#suggestions li {
   position:relative;
 }
 
-ul li a {
+ul#suggestions li a {
   position:absolute;
   right:10px;
 }
