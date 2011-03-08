@@ -7,6 +7,10 @@ body {
   font-size: 12px;
 }
 
+a img {
+  border: none;
+}
+
 #outer {
   width: 700px;
   margin: auto;
