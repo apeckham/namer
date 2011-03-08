@@ -47,4 +47,16 @@ describe SurveysController do
     response.should redirect_to :controller => :surveys, :action => :show, :id => survey.to_param
     survey.reload.suggestions.map(&:name).should == ["whatchama"]
   end
+
+  it "should sort suggestions (oldest first)" do
+    survey = Survey.create!
+    a = survey.suggestions.create!(:created_at => 10.days.ago)
+    b = survey.suggestions.create!(:created_at => 1.days.ago)
+    c = survey.suggestions.create!(:created_at => 5.days.ago)
+
+    get :show, :id => survey.to_param
+
+    assigns(:survey).suggestions.should == [a, c, b]
+  end
+
 end

@@ -4,6 +4,7 @@ body {
   background-color: #F7F7F7;
   padding: 0;
   margin: 0;
+  font-size: 12px;
 }
 
 #outer {
@@ -106,7 +107,7 @@ ul#suggestions li div {
 }
 
 ul#suggestions li span {
-  font-size:1.5em;
+  font-size:1em;
   margin-right:0.5em;
 }
 

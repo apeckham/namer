@@ -1,6 +1,6 @@
 class Survey < ActiveRecord::Base
   before_create :generate_random_id
-  has_many :suggestions
+  has_many :suggestions, :order => "created_at asc"
 
   def to_param
     self.random_id
