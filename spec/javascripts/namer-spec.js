@@ -1,17 +1,30 @@
 describe("namer", function() {
   describe("lookUpDomains", function() {
-    it("should populate suggestion's domain element", function() {
-      var suggestionElement = $("<div class='suggestion'><div class='domains'></div></div>")
-      expect($(".suggestion .domains").text(), suggestionElement).toEqual("");
+    var suggestionElement, jsonResponse;
 
-      var ajax = { "query": "domai.nr", "results": [
+    beforeEach(function() {
+      suggestionElement = $("<div class='suggestion'><span class='name'>domai.nr</span> <div class='domains'></div></div>")
+      expect($(suggestionElement).find(".domains").attr("title")).toEqual("");
+
+      jsonResponse = { "query": "domai.nr", "results": [
         { "domain": "domai.nr", "register_url": "http://domai.nr/domai.nr/register", "host": "", "path": "", "subdomain": "domai.nr", "availability": "taken" },
         { "domain": "dom.ai", "register_url": "http://domai.nr/dom.ai/register", "host": "", "path": "/nr", "subdomain": "dom.ai", "availability": "available" }
       ]};
+
+    });
+
+    it("should extract the suggestion name from the DOM", function() {
+      spyOn($, "ajax");
+      namer.lookup(suggestionElement);
+      expect($.ajax.mostRecentCall.args[0].url).toEqual("/search?q=domai.nr");
+    });
+
+    it("should populate suggestion's domain element", function() {
       spyOn($, "ajax").andCallFake(function(options) {
-        options.success(ajax);
+        options.success(jsonResponse);
       });
-      namer.lookup("domai.nr", suggestionElement);
+
+      namer.lookup(suggestionElement);
       expect($(suggestionElement).find(".domains").attr("title")).toEqual("domai.nr: taken\rdom.ai: available\r");
     });
   });

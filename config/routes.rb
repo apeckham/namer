@@ -1,9 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.search '/search', :controller => :domains, :action => :search
+
   map.surveys '/', :controller => :surveys, :action => :index
   map.survey '/:id', :controller => :surveys, :action => :show
   
   map.resources :suggestions
   map.vote '/vote/:id', :controller => :suggestions, :action => :vote
+
 
   # The priority is based upon order of creation: first created -> highest priority.
 

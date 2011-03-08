@@ -18,11 +18,13 @@
     %h1 Here's what others suggested:
     %ul#suggestions
       - @survey.suggestions.each do |suggestion|
-        %li.clearfix
+        %li.suggestion.clearfix
+          .info
+            %div
+              %span=suggestion.score
+              = link_to "+1", vote_path(suggestion), :method => :put
+            %div.domains Availability
           %span.name=h(suggestion.name)
-          %div
-            %span=suggestion.score
-            = link_to "+1", vote_path(suggestion), :method => :put
 
   %h1 What would you call it?
   - form_for Suggestion.new, :url =>{ :action => :suggest, :id => @survey.to_param } do |f|

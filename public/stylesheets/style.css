@@ -102,15 +102,16 @@ ul#suggestions li {
   border-radius: 3px;
   padding: 3px 6px;
   margin: 0 6px 10px 0;
-  line-height: 1.5em;
 }
 
-ul#suggestions li div {
+ul#suggestions li .info {
   float:right;
   font-size:0.4em;
+  text-align: center;
 }
 
 ul#suggestions li span {
+  line-height: 1.5em;
   font-size:1em;
   margin-right:0.5em;
 }
@@ -128,6 +129,11 @@ ul#suggestions li div a {
   line-height:2;
   text-align:center;
   color:#000;
+}
+
+ul#suggestions .domains {
+  margin-top: 3px;
+  border-bottom: 1px dashed #ccc;
 }
 
 #flash {

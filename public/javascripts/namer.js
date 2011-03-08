@@ -1,12 +1,15 @@
 var namer = {
   lookUpDomains: function() {
-    $('#suggestions .name').each(function(i, obj) {
-      namer.lookup(name);
+    $('.suggestion').each(function() {
+      namer.lookup(this);
     });
   },
 
-  lookup: function(name, resultElement) {
-    $.ajax({ success: function(response) {
+  lookup: function(suggestionElement) {
+    var name = $(suggestionElement).find(".name");
+    console.log("lookup");
+    $.ajax({ url: "/search?q=" + name.text(), success: function(response) {
+      console.log(response);
       var formatted = "";
       $(response.results).each(function() {
         formatted += this.domain;
@@ -14,7 +17,8 @@ var namer = {
         formatted += this.availability;
         formatted += "\r";
       });
-      $(resultElement).find(".domains").attr("title", formatted);
+      console.log(formatted);
+      $(suggestionElement).find(".domains").attr("title", formatted);
     }});
   }
 };
