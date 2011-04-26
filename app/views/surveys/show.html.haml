@@ -21,8 +21,9 @@
         %tbody.suggestion
           %tr
             %td.name= h(suggestion.name)
-            %td= suggestion.score
-            %td= link_to "+1", vote_path(suggestion), :method => :put
+            %td.info
+              = suggestion.score
+              = link_to "+1", vote_path(suggestion), :method => :put
           %tr
             %td{:colspan=>3}
               .domains

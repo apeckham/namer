@@ -4,6 +4,9 @@ body {
   background-color: #F7F7F7;
   padding: 0;
   margin: 0;
+}
+
+body, td {
   font-size: 12px;
 }
 
@@ -91,41 +94,46 @@ h1 b {
   font-size: 2.5em;
 }
 
-ul#suggestions {
-  list-style: none;
+table#suggestions {
+    width: 100%;
+    padding-top: 2em;
 }
 
-ul#suggestions li {
-  font-size: 2.5em;
+#suggestions td {
+  font-size: 1.8em;
+}
+
+#suggestions td.name {
   display: block;
-  background-color: #EEE;
-  border-radius: 3px;
-  padding: 3px 6px;
+  padding: 3px 0;
   margin: 0 6px 10px 0;
 }
 
-ul#suggestions li .info {
-  float:right;
-  font-size:0.4em;
-  text-align: center;
+#suggestions .info {
+  text-align: right;
+}
+
+#suggestions .domains {
+    font-size: 0.7em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EEE;
 }
 
 ul#suggestions li span {
   line-height: 1.5em;
-  font-size:1em;
   margin-right:0.5em;
 }
 
-ul#suggestions li div a {
+#suggestions .info a {
   display:inline-block;
   background-color:#fff;
   border:1px solid #ccc;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   text-decoration:none;
-  width:2em;
   height:2em;
-  padding:0;
+  padding: 0 10px;
+    margin-left: 10px;
   line-height:2;
   text-align:center;
   color:#000;
