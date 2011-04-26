@@ -14,7 +14,9 @@ var namer = {
             success: function(response) {
                 var formatted = [];
                 $(response.results).each(function() {
-                    formatted.push(this.domain + ": " + this.availability);
+                    if (this.availability == "available") {
+                        formatted.push(this.domain);
+                    }
                 });
                 $(suggestionElement).find(".domains").text(formatted.join(", "));
             }});
