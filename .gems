@@ -1,6 +1,0 @@
-rails -v 2.3.10
-haml
-sqlite3
-rspec-rails -v 1.3.3
-shoulda
-jasmine
