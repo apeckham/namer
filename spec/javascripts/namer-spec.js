@@ -26,7 +26,7 @@ describe("namer", function() {
       });
 
       namer.lookup(suggestionElement);
-      expect($(suggestionElement).find(".domains").attr("title")).toEqual("domai.nr: taken\rdom.ai: available\r");
+      expect($(suggestionElement).find(".domains").text()).toEqual("domai.nr: taken, dom.ai: available");
     });
   });
 });

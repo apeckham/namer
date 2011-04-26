@@ -27,7 +27,7 @@
           %tr
             %td{:colspan=>3}
               .domains
-                Availability
+                %i loading&hellip;
 
   %h1 What would you call it?
   - form_for Suggestion.new, :url =>{ :action => :suggest, :id => @survey.to_param } do |f|
