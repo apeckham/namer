@@ -1,16 +1,10 @@
 describe("namer", function() {
   describe("lookUpDomains", function() {
-    var suggestionElement, jsonResponse;
+    var suggestionElement;
 
     beforeEach(function() {
       suggestionElement = $("<div class='suggestion'><span class='name'>domai.nr</span> <div class='domains'></div></div>")
       expect($(suggestionElement).find(".domains").attr("title")).toEqual("");
-
-      jsonResponse = { "query": "domai.nr", "results": [
-        { "domain": "domai.nr", "register_url": "http://domai.nr/domai.nr/register", "host": "", "path": "", "subdomain": "domai.nr", "availability": "taken" },
-        { "domain": "dom.ai", "register_url": "http://domai.nr/dom.ai/register", "host": "", "path": "/nr", "subdomain": "dom.ai", "availability": "available" },
-        { "domain": "do.mainr", "register_url": "http://domai.nr/dom.ai/register", "host": "", "path": "/nr", "subdomain": "dom.ainer", "availability": "available" }
-      ]};
     });
 
     it("should extract the available suggestion names from the DOM", function() {
@@ -21,12 +15,29 @@ describe("namer", function() {
     });
 
     it("should populate suggestion's domain element with available domains", function() {
+      var jsonResponse = { "query": "domai.nr", "results": [
+        { "domain": "domai.nr", "register_url": "http://domai.nr/domai.nr/register", "host": "", "path": "", "subdomain": "domai.nr", "availability": "taken" },
+        { "domain": "dom.ai", "register_url": "http://domai.nr/dom.ai/register", "host": "", "path": "/nr", "subdomain": "dom.ai", "availability": "available" },
+        { "domain": "do.mainr", "register_url": "http://domai.nr/dom.ai/register", "host": "", "path": "/nr", "subdomain": "dom.ainer", "availability": "available" }
+      ]};
+
       spyOn($, "ajax").andCallFake(function(options) {
         options.success(jsonResponse);
       });
 
       namer.lookup(suggestionElement);
       expect($(suggestionElement).find(".domains").text()).toEqual("dom.ai, do.mainr");
+    });
+
+    it("should show 'no domains available' when domainr returns an empty list", function() {
+      var jsonResponse = { "query": "domai.nr", "results": []};
+
+      spyOn($, "ajax").andCallFake(function(options) {
+        options.success(jsonResponse);
+      });
+
+      namer.lookup(suggestionElement);
+      expect($(suggestionElement).find(".domains").text()).toEqual("no domains available");
     });
   });
 });
