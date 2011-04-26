@@ -11,6 +11,6 @@
   %body
     #outer
       #header
-        = link_to(image_tag("logo.png"), :controller => :surveys, :action => :index)
+        = link_to(content_tag(:h1, "help name it!"), :controller => :surveys, :action => :index)
     
       = yield

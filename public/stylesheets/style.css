@@ -72,6 +72,15 @@ h1 {
   color: #666666;
 }
 
+#header a h1 {
+  font-weight: bold;
+  color: black;
+}
+
+#header a {
+  text-decoration: none;
+}
+
 h1 b {
   color: black;
 }
