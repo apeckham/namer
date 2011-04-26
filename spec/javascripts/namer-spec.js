@@ -16,7 +16,8 @@ describe("namer", function() {
     it("should extract the suggestion name from the DOM", function() {
       spyOn($, "ajax");
       namer.lookup(suggestionElement);
-      expect($.ajax.mostRecentCall.args[0].url).toEqual("/search?q=domai.nr");
+      expect($.ajax.mostRecentCall.args[0].url).toEqual("http://domai.nr/api/json/search?q=domai.nr");
+      expect($.ajax.mostRecentCall.args[0].dataType).toEqual("jsonp");
     });
 
     it("should populate suggestion's domain element", function() {

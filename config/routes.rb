@@ -1,6 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.search '/search', :controller => :domains, :action => :search
-
   map.surveys '/', :controller => :surveys, :action => :index
   map.survey '/:id', :controller => :surveys, :action => :show
   
